@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NyumbaIQ: Proof, before you pay</title>
+<meta name="description" content="NyumbaIQ is trust infrastructure for Kenyan real estate. A verified record for every home, before a shilling changes hands." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Font loading note: the stylesheet above requests Fraunces / Inter / IBM Plex Mono
+     from Google Fonts. Every rule in site.css also lists a robust system fallback
+     stack, so the page renders correctly even on a network where the Google Fonts
+     request is blocked or slow. -->
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-mark">
+    <svg class="logo-mark" width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+      <path d="M13 20.5l5 5l9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    NyumbaIQ
+  </div>
+  <div class="nav-links">
+    <a href="#proof">The evidence</a>
+    <a href="#ledger">The ledger</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#waitlist">Waitlist</a>
+    <a href="app.html" class="nav-cta">The Product →</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Trust infrastructure for Kenyan real estate</div>
+    <h1>Know <em>who</em><br>you're paying.</h1>
+    <p class="hero-sub">Before a shilling moves, NyumbaIQ shows you the verified truth about a home, and the person behind it.</p>
+    <a href="app.html" style="display:inline-flex; align-items:center; gap:10px; margin-top:30px; padding:13px 26px; background:#0F9E8E; color:#0B1E36; font-family:'Inter',sans-serif; font-weight:600; font-size:0.95rem; border-radius:2px;">Try the live product demo →</a>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span class="num">2.0M+</span><span class="lbl">Kenya's housing unit deficit</span></div>
+      <div class="hero-meta-item"><span class="num">73%</span><span class="lbl">of urban Kenyans currently rent</span></div>
+      <div class="hero-meta-item"><span class="num">68%</span><span class="lbl">lack secure property documentation</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="scroll-line"></span>Scroll</div>
+</header>
+
+<!-- ============ SCENE 01 : the moment of doubt ============ -->
+<!-- PHOTO SLOT 1 of 3, see ORDER.md Scene 1 for exact brief -->
+<section class="scene">
+  <img class="scene-photo" src="assets/images/scene-01-gate.jpg" alt="An estate gate at dusk in Nairobi" loading="lazy" decoding="async"
+       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <svg class="scene-fallback" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="An estate gate at dusk">
+    <defs>
+      <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2a3d52"/>
+        <stop offset="45%" stop-color="#1c2f45"/>
+        <stop offset="100%" stop-color="#0B1E36"/>
+      </linearGradient>
+      <radialGradient id="sun1" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#C4693F" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#C4693F" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="wall1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#12233a"/>
+        <stop offset="100%" stop-color="#0a1729"/>
+      </linearGradient>
+    </defs>
+    <rect width="1600" height="1000" fill="url(#sky1)"/>
+    <circle cx="1180" cy="330" r="260" fill="url(#sun1)"/>
+    <circle cx="1180" cy="330" r="46" fill="#C4693F" opacity="0.9"/>
+    <!-- distant rooftops -->
+    <g fill="#0e1e34" opacity="0.9">
+      <rect x="0" y="560" width="240" height="180"/>
+      <rect x="230" y="520" width="180" height="220"/>
+      <rect x="1400" y="540" width="200" height="200"/>
+      <rect x="1250" y="580" width="160" height="160"/>
+    </g>
+    <!-- compound wall -->
+    <rect x="0" y="640" width="1600" height="360" fill="url(#wall1)"/>
+    <rect x="0" y="636" width="1600" height="8" fill="#0d1c30"/>
+    <!-- gate posts -->
+    <rect x="560" y="470" width="46" height="530" fill="#08131f"/>
+    <rect x="994" y="470" width="46" height="530" fill="#08131f"/>
+    <rect x="540" y="450" width="86" height="34" fill="#08131f"/>
+    <rect x="974" y="450" width="86" height="34" fill="#08131f"/>
+    <!-- gate bars -->
+    <g stroke="#1a2c44" stroke-width="7">
+      <line x1="640" y1="500" x2="640" y2="1000"/>
+      <line x1="690" y1="500" x2="690" y2="1000"/>
+      <line x1="740" y1="500" x2="740" y2="1000"/>
+      <line x1="790" y1="500" x2="790" y2="1000"/>
+      <line x1="840" y1="500" x2="840" y2="1000"/>
+      <line x1="890" y1="500" x2="890" y2="1000"/>
+      <line x1="940" y1="500" x2="940" y2="1000"/>
+    </g>
+    <line x1="606" y1="520" x2="994" y2="520" stroke="#1a2c44" stroke-width="10"/>
+    <!-- warm window glow, one lit unit -->
+    <rect x="300" y="560" width="34" height="44" fill="#C4693F" opacity="0.75"/>
+    <rect x="1440" y="580" width="30" height="40" fill="#C4693F" opacity="0.55"/>
+    <!-- lone figure by the gate -->
+    <ellipse cx="720" cy="870" rx="24" ry="8" fill="#000" opacity="0.25"/>
+    <rect x="705" y="760" width="30" height="110" rx="12" fill="#0d1c30"/>
+    <circle cx="720" cy="742" r="17" fill="#0d1c30"/>
+  </svg>
+  <div class="scene-veil"></div>
+  <div class="scene-caption">
+    <span class="eyebrow">Every hunt begins here</span>
+    <h2>A gate. A stranger.<br>A number to call.</h2>
+    <p class="lede">No name you can verify. No record of who lived here before you, or what they found.</p>
+  </div>
+</section>
+
+<!-- ============ STORY 01 : the gap ============ -->
+<section class="beat paper">
+  <div class="wrap story">
+    <div class="story-text">
+      <span class="eyebrow">01 · The gap</span>
+      <h2>Kenya isn't short on listings.</h2>
+      <p>Forty-plus property apps already compete for the same houses. More photos, more filters, more inventory.</p>
+      <p class="callout">Not one of them tells you who you're actually about to trust.</p>
+    </div>
+    <div class="plate">
+      <span class="plate-label">From our field interviews</span>
+      <p class="plate-line">"I paid the agent, went to view the house, and it was nothing like what I asked for. I never got that money back."</p>
+      <p class="plate-who">Renter, Kasarani, house hunt 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERSONA : meet James ============ -->
+<section class="persona-section">
+  <div class="wrap persona-grid">
+    <div class="persona-card">
+      <div class="p-name">James Mwangi</div>
+      <div class="p-tag">Age 26 · Junior software developer</div>
+      <div class="persona-facts">
+        <div class="pf-row"><span class="pf-label">Income</span><span class="pf-val">KSh 65,000 / month</span></div>
+        <div class="pf-row"><span class="pf-label">Currently</span><span class="pf-val">Bedsitter, Kasarani</span></div>
+        <div class="pf-row"><span class="pf-label">Looking for</span><span class="pf-val">1BR, Kilimani–South B</span></div>
+        <div class="pf-row"><span class="pf-label">Budget</span><span class="pf-val">KSh 20,000–28,000</span></div>
+        <div class="pf-row"><span class="pf-label">Already lost</span><span class="pf-val">KSh 3,000 to a fake "viewing fee"</span></div>
+      </div>
+    </div>
+    <div class="persona-text">
+      <span class="eyebrow">02 · Who this is for</span>
+      <h2>James isn't searching for a house.</h2>
+      <p>He's eight months into his first real job, finally has a deposit saved, and is tired of a three-hour commute. He's already been shown two units that didn't match their photos, and lost KSh 3,000 to someone who wasn't even the agent. On a normal Saturday he scrolls Facebook groups, calls three numbers, and walks estates looking for physical "to let" signs, because at least a sign feels more real than a phone number.</p>
+      <p class="callout">He is searching for someone he can actually trust with his deposit.</p>
+      <div class="persona-math">
+        <div class="pm-item"><div class="pm-num">KSh 3,000</div><div class="pm-lbl">Already lost</div></div>
+        <span class="pm-arrow">→</span>
+        <div class="pm-item"><div class="pm-num">KSh 299</div><div class="pm-lbl">Hunt Pass</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 02 : the paperwork ============ -->
+<section class="scene">
+  <!-- PHOTO SLOT 2 of 3, see ORDER.md Scene 2 for exact brief -->
+  <img class="scene-photo" src="assets/images/scene-02-verification.jpg" alt="A document and a phone showing a verification moment" loading="lazy" decoding="async"
+       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <svg class="scene-fallback" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A document and a phone showing a verification moment">
+    <defs>
+      <linearGradient id="sky2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#16283f"/>
+        <stop offset="100%" stop-color="#0B1E36"/>
+      </linearGradient>
+    </defs>
+    <rect width="1600" height="1000" fill="url(#sky2)"/>
+    <!-- table surface -->
+    <rect x="0" y="600" width="1600" height="400" fill="#0e2035"/>
+    <rect x="0" y="596" width="1600" height="6" fill="#1a2c44"/>
+    <!-- document, angled -->
+    <g transform="translate(500,430) rotate(-4)">
+      <rect x="0" y="0" width="420" height="300" rx="4" fill="#FBF8EF"/>
+      <rect x="0" y="0" width="420" height="300" rx="4" fill="none" stroke="#8A7A5C" stroke-opacity="0.35"/>
+      <rect x="36" y="40" width="230" height="14" fill="#0B1E36" opacity="0.75"/>
+      <rect x="36" y="68" width="160" height="9" fill="#8A7A5C" opacity="0.5"/>
+      <line x1="36" y1="106" x2="384" y2="106" stroke="#8A7A5C" stroke-opacity="0.3"/>
+      <rect x="36" y="128" width="340" height="8" fill="#8A7A5C" opacity="0.35"/>
+      <rect x="36" y="150" width="300" height="8" fill="#8A7A5C" opacity="0.35"/>
+      <rect x="36" y="172" width="320" height="8" fill="#8A7A5C" opacity="0.35"/>
+      <circle cx="330" cy="240" r="38" fill="none" stroke="#0F9E8E" stroke-width="2.5" transform="rotate(-10 330 240)"/>
+      <circle cx="330" cy="240" r="28" fill="none" stroke="#0F9E8E" stroke-width="1" stroke-dasharray="2 3" transform="rotate(-10 330 240)"/>
+    </g>
+    <!-- phone showing an M-Pesa style confirmation -->
+    <g transform="translate(940,300)">
+      <rect x="0" y="0" width="230" height="470" rx="26" fill="#08131f"/>
+      <rect x="10" y="14" width="210" height="442" rx="16" fill="#0d2138"/>
+      <rect x="30" y="60" width="170" height="22" rx="4" fill="#0F9E8E" opacity="0.85"/>
+      <rect x="30" y="100" width="150" height="10" fill="#c3cfd6" opacity="0.55"/>
+      <rect x="30" y="120" width="120" height="10" fill="#c3cfd6" opacity="0.4"/>
+      <rect x="30" y="170" width="170" height="1" fill="#2a4059"/>
+      <rect x="30" y="190" width="170" height="14" fill="#F5F1E4" opacity="0.85"/>
+      <rect x="30" y="214" width="120" height="10" fill="#8fbdb5" opacity="0.7"/>
+      <rect x="30" y="260" width="170" height="46" rx="6" fill="#0F9E8E" opacity="0.18"/>
+      <rect x="44" y="274" width="90" height="9" fill="#0F9E8E"/>
+      <rect x="44" y="288" width="60" height="7" fill="#8fbdb5" opacity="0.7"/>
+    </g>
+    <!-- ambient warm accent -->
+    <circle cx="1420" cy="160" r="220" fill="#C4693F" opacity="0.08"/>
+  </svg>
+  <div class="scene-veil"></div>
+  <div class="scene-caption">
+    <span class="eyebrow">What trust actually requires</span>
+    <h2>Proof, not promises.</h2>
+    <p class="lede">A verified identity. A visited unit. A cost that doesn't change after you've signed.</p>
+  </div>
+</section>
+
+<!-- ============ STORY 02 : the mechanism ============ -->
+<section class="beat deep">
+  <div class="wrap story">
+    <div class="plate" style="order:2">
+      <span class="plate-label">The old way</span>
+      <p class="plate-line">A circular badge reading "91% trusted." Nobody can tell you how that number was made, or who made it.</p>
+      <p class="plate-who">Every existing listings app, today</p>
+    </div>
+    <div class="story-text" style="order:1">
+      <span class="eyebrow">03 · The mechanism</span>
+      <h2>We don't score trust.<br>We document it.</h2>
+      <p>NyumbaIQ replaces the invented badge with a ledger: a timestamped, specific record of real actions taken on a real property.</p>
+      <p class="callout">A ledger can be checked. A score can only be believed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE LEDGER : signature element ============ -->
+<section class="ledger-section" id="ledger">
+  <div class="wrap">
+    <div class="ledger-intro">
+      <span class="eyebrow">04 · The signature</span>
+      <h2>One property. One record.</h2>
+      <p>Every home on NyumbaIQ carries a document like this: not a percentage, a sequence of things that actually happened, each one checkable.</p>
+    </div>
+
+    <div class="ledger-doc">
+      <div class="ledger-top">
+        <div>
+          <div class="lt-title">1BR Apartment, Kilimani</div>
+          <div class="lt-sub">MURINGA ROAD · REF NIQ-2026-04471</div>
+        </div>
+        <div class="seal"><span class="seal-txt">VERIFIED<br>RECORD</span></div>
+      </div>
+
+      <div class="ledger-rows">
+        <div class="lrow">
+          <span class="dot"></span>
+          <div>
+            <div class="lbl">Landlord identity confirmed</div>
+            <div class="desc">Phone-verified against national ID · 08 Jun 2026</div>
+          </div>
+          <span class="stamp">Verified</span>
+        </div>
+        <div class="lrow">
+          <span class="dot"></span>
+          <div>
+            <div class="lbl">Unit visited in person</div>
+            <div class="desc">Water pressure, security, and photos confirmed on site</div>
+          </div>
+          <span class="stamp">Verified</span>
+        </div>
+        <div class="lrow">
+          <span class="dot"></span>
+          <div>
+            <div class="lbl">Full cost disclosed upfront</div>
+            <div class="desc">Deposit, water, garbage, and service charge itemised</div>
+          </div>
+          <span class="stamp">Verified</span>
+        </div>
+        <div class="lrow">
+          <span class="dot"></span>
+          <div>
+            <div class="lbl">Tenant review recorded</div>
+            <div class="desc">Verified former tenant · stayed two years</div>
+          </div>
+          <span class="stamp">Verified</span>
+        </div>
+        <div class="lrow pending">
+          <span class="dot"></span>
+          <div>
+            <div class="lbl">Title cross-check</div>
+            <div class="desc">Automated registry check · next phase</div>
+          </div>
+          <span class="stamp">Planned</span>
+        </div>
+      </div>
+
+      <div class="ledger-cost">
+        <div class="cost-row"><span>Rent, first month</span><span class="amt">KSh 45,000</span></div>
+        <div class="cost-row"><span>Deposit, two months</span><span class="amt">KSh 90,000</span></div>
+        <div class="cost-row"><span>Water and service charge</span><span class="amt">KSh 6,000</span></div>
+        <div class="cost-row total"><span>Total before you hold the keys</span><span class="amt">KSh 141,000</span></div>
+      </div>
+    </div>
+
+    <p class="ledger-foot">Illustrative record. Verification method scales as real listings launch in Nairobi.</p>
+  </div>
+</section>
+
+<!-- ============ PROOF : real evidence, two sources named ============ -->
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div class="proof-head">
+      <span class="eyebrow">05 · The evidence</span>
+      <h2>The gap is measured, not assumed.</h2>
+      <p>We combined our own primary research — a structured survey of 25 respondents and more than 30 direct interviews with renters actively hunting for housing — with independent Kenyan market data. The two tell the same story from different angles.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="figure">80%</div>
+        <p class="cap">of urban households cannot fully afford rent in a given year, straining every part of the search for something they can trust and keep.</p>
+        <p class="src">Source · Kenya National Bureau of Statistics</p>
+      </div>
+      <div class="stat">
+        <div class="figure">68%</div>
+        <p class="cap">of Kenyans lack secure land or property documentation, the exact gap a verified ledger is built to close.</p>
+        <p class="src">Source · Habitat for Humanity Kenya, 2026</p>
+      </div>
+      <div class="stat">
+        <div class="figure">4×</div>
+        <p class="cap">the gap between annual housing demand and new supply: 250,000 units needed, only 50,000 built each year.</p>
+        <p class="src">Source · Habitat for Humanity Kenya, 2026</p>
+      </div>
+      <div class="stat">
+        <div class="figure">3-in-4</div>
+        <p class="cap">respondents said they do not trust the property information they currently find online.</p>
+        <p class="src">Source · NyumbaIQ primary field research</p>
+      </div>
+      <div class="stat">
+        <div class="figure">3-in-5</div>
+        <p class="cap">respondents said finding a suitable home is difficult or very difficult.</p>
+        <p class="src">Source · NyumbaIQ primary field research</p>
+      </div>
+      <div class="stat">
+        <div class="figure">4-in-5</div>
+        <p class="cap">respondents said they would pay to confirm a house or landlord is genuine before committing.</p>
+        <p class="src">Source · NyumbaIQ primary field research</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENE 03 : who this serves ============ -->
+<section class="scene">
+  <!-- PHOTO SLOT 3 of 3, see ORDER.md Scene 3 for exact brief -->
+  <img class="scene-photo" src="assets/images/scene-03-renter.jpg" alt="A renter standing before an apartment building at evening" loading="lazy" decoding="async"
+       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <svg class="scene-fallback" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A renter standing before an apartment building at evening">
+    <defs>
+      <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1c3049"/>
+        <stop offset="60%" stop-color="#12233a"/>
+        <stop offset="100%" stop-color="#0B1E36"/>
+      </linearGradient>
+    </defs>
+    <rect width="1600" height="1000" fill="url(#sky3)"/>
+    <circle cx="260" cy="200" r="180" fill="#0F9E8E" opacity="0.06"/>
+    <!-- apartment block -->
+    <rect x="760" y="120" width="620" height="760" fill="#0e2035"/>
+    <rect x="756" y="116" width="628" height="10" fill="#16283f"/>
+    <g fill="#0F9E8E">
+      <!-- grid of windows, some lit -->
+    </g>
+    <g>
+      <!-- generate window grid manually for control over lit pattern -->
+      <g fill="#8fbdb5" opacity="0.85">
+        <rect x="800" y="170" width="46" height="60"/>
+        <rect x="880" y="170" width="46" height="60" opacity="0.25"/>
+        <rect x="960" y="170" width="46" height="60"/>
+        <rect x="1040" y="170" width="46" height="60" opacity="0.25"/>
+        <rect x="1120" y="170" width="46" height="60"/>
+        <rect x="1200" y="170" width="46" height="60" opacity="0.25"/>
+        <rect x="1280" y="170" width="46" height="60"/>
+
+        <rect x="800" y="260" width="46" height="60" opacity="0.25"/>
+        <rect x="880" y="260" width="46" height="60"/>
+        <rect x="960" y="260" width="46" height="60" opacity="0.25"/>
+        <rect x="1040" y="260" width="46" height="60"/>
+        <rect x="1120" y="260" width="46" height="60" opacity="0.25"/>
+        <rect x="1200" y="260" width="46" height="60"/>
+        <rect x="1280" y="260" width="46" height="60" opacity="0.25"/>
+
+        <rect x="800" y="350" width="46" height="60"/>
+        <rect x="880" y="350" width="46" height="60" opacity="0.25"/>
+        <rect x="960" y="350" width="46" height="60"/>
+        <rect x="1040" y="350" width="46" height="60" opacity="0.25"/>
+        <rect x="1120" y="350" width="46" height="60"/>
+        <rect x="1200" y="350" width="46" height="60" opacity="0.25"/>
+        <rect x="1280" y="350" width="46" height="60"/>
+
+        <rect x="800" y="440" width="46" height="60" opacity="0.25"/>
+        <rect x="880" y="440" width="46" height="60"/>
+        <rect x="960" y="440" width="46" height="60" opacity="0.25"/>
+        <rect x="1040" y="440" width="46" height="60"/>
+        <rect x="1120" y="440" width="46" height="60" opacity="0.25"/>
+        <rect x="1200" y="440" width="46" height="60"/>
+        <rect x="1280" y="440" width="46" height="60" opacity="0.25"/>
+      </g>
+      <g fill="#C4693F" opacity="0.55">
+        <rect x="960" y="530" width="46" height="60"/>
+        <rect x="1040" y="530" width="46" height="60"/>
+      </g>
+      <g fill="#8fbdb5" opacity="0.3">
+        <rect x="800" y="530" width="46" height="60"/>
+        <rect x="880" y="530" width="46" height="60"/>
+        <rect x="1120" y="530" width="46" height="60"/>
+        <rect x="1200" y="530" width="46" height="60"/>
+        <rect x="1280" y="530" width="46" height="60"/>
+      </g>
+    </g>
+    <!-- ground -->
+    <rect x="0" y="820" width="1600" height="180" fill="#08131f"/>
+    <!-- renter silhouette, foreground left -->
+    <g>
+      <ellipse cx="330" cy="900" rx="46" ry="12" fill="#000" opacity="0.3"/>
+      <rect x="298" y="700" width="64" height="200" rx="20" fill="#0a1729"/>
+      <circle cx="330" cy="672" r="30" fill="#0a1729"/>
+      <rect x="270" y="760" width="30" height="110" rx="12" fill="#0a1729" transform="rotate(8 285 815)"/>
+      <rect x="230" y="800" width="70" height="90" rx="6" fill="#0d2138"/>
+    </g>
+  </svg>
+  <div class="scene-veil"></div>
+  <div class="scene-caption">
+    <span class="eyebrow">06 · Who we serve, in order</span>
+    <h2>Renters first.<br>Then everyone who needs them to trust the system.</h2>
+    <p class="lede">Landlords and agencies join the same ledger once tenants are already using it, not before.</p>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="pricing-head">
+      <span class="eyebrow">07 · Pricing</span>
+      <h2>Paid per search, not by the month.</h2>
+      <p>Nobody hunts for housing every month, so the model does not pretend otherwise.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-plate">
+        <div class="pp-eyebrow">Browse</div>
+        <div class="pp-figure">Free</div>
+        <ul>
+          <li>Search every listed property</li>
+          <li>See verification status at a glance</li>
+          <li>Basic listing details</li>
+        </ul>
+      </div>
+      <div class="price-plate dark">
+        <div class="pp-eyebrow">Hunt Pass</div>
+        <div class="pp-figure">KSh 299 <small>/ 30-day search</small></div>
+        <ul>
+          <li>Full ledger on every listing</li>
+          <li>Itemised, guaranteed move-in cost</li>
+          <li>Verified tenant reviews</li>
+          <li>Paid by M-Pesa</li>
+        </ul>
+      </div>
+    </div>
+    <p class="market-note" style="margin-top:36px;">Landlord and agency revenue layers come later, not now — sequenced deliberately after tenant-side trust is proven, in line with who we serve, in order.</p>
+  </div>
+</section>
+
+<!-- ============ WAITLIST ============ -->
+<!-- Live Google Form (built and hosted by the team) embedded via iframe.
+     Static file, no server of ours involved — matches the "flat files only" build. -->
+<section class="waitlist-section" id="waitlist">
+  <div class="wrap">
+    <div class="waitlist-head">
+      <span class="eyebrow">08 · Early access</span>
+      <h2>NyumbaIQ early access waitlist</h2>
+      <p>We are building the first Trust Ledger for Nairobi real estate. No fake listings, no hidden costs, just verified proof. Join the waitlist to get early access to our hand-verified database.</p>
+    </div>
+
+    <div class="waitlist-card">
+      <div class="wl-points">
+        <div class="wl-point"><span class="dot"></span>Full name and WhatsApp number, so we can send you verified reports directly.</div>
+        <div class="wl-point"><span class="dot"></span>Where you're hunting and your budget, so we match you to real listings first.</div>
+        <div class="wl-point"><span class="dot"></span>Takes under a minute. No payment, no obligation.</div>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQOob7X77RMwD1Gcnijezz4x_gAEKPIXSqEVQp-_WkDDEjYg/viewform" target="_blank" rel="noopener" class="wl-cta-btn">Join Waitlist →</a>
+      <p class="wl-note">Opens the waitlist form in a new tab.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSE : team credit ============ -->
+<section class="close" id="team">
+  <div class="wrap close-inner">
+    <span class="eyebrow">The team behind NyumbaIQ</span>
+    <h2>Built by six people<br>who got tired of the doubt.</h2>
+    <p class="lede">This is a working direction, not a finished product. We would rather show you exactly where it stands.</p>
+
+    <div class="team-row">
+      <span class="team-name">Bethwel Monny</span>
+      <span class="team-name">Betty Okello</span>
+      <span class="team-name">Simon Muchina</span>
+      <span class="team-name">Emmanuel Onyango</span>
+      <span class="team-name">Benjamin Nengomasha</span>
+      <span class="team-name">Katelyn Nashikawa</span>
+    </div>
+    <div class="team-tag">NyumbaIQ · Nairobi, Kenya · 2026</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 NyumbaIQ</span>
+    <span><a href="pitch.html" style="color:#8fbdb5;">The full pitch →</a> · Nairobi, Kenya</span>
+  </div>
+</footer>
+
+</body>
+</html>

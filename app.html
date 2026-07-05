@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NyumbaIQ — Verified Property, Trusted Decisions</title>
+<meta name="description" content="NyumbaIQ connects renters, landlords and agencies with listings backed by a checkable Trust Ledger — identity confirmed, unit visited in person, true cost disclosed upfront." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<!-- ============ GLASS HEADER ============ -->
+<header class="app-nav">
+  <div class="app-nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg class="icon" width="26" height="26"><use href="assets/app/icons.svg#logo"/></svg></span>
+      <span class="brand-name">Nyumba<span>IQ</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#listings">Rent</a>
+      <a href="#listings">Buy</a>
+      <a href="#trust">Verification</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="auth.html" class="btn btn-ghost btn-lg">Log in</a>
+      <a href="auth.html" class="btn btn-primary btn-lg">Sign up</a>
+    </div>
+
+    <button class="btn btn-outline btn-icon nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <svg class="icon" width="18" height="18"><use href="assets/app/icons.svg#menu"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <a class="nav-item" href="#listings">Rent</a>
+      <a class="nav-item" href="#listings">Buy</a>
+      <a class="nav-item" href="#trust">Verification</a>
+      <a class="nav-item" href="#pricing">Pricing</a>
+      <div class="mobile-actions">
+        <a href="auth.html" class="btn btn-outline btn-lg">Log in</a>
+        <a href="auth.html" class="btn btn-primary btn-lg">Sign up</a>
+      </div>
+      <p class="mobile-verified">
+        <svg class="icon" width="14" height="14"><use href="assets/app/icons.svg#shield-check"/></svg>
+        Trust Ledger-verified listings
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/app/hero-property.jpg" alt="Aerial view of a modern verified residential neighbourhood" loading="eager" fetchpriority="high">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge">
+        <svg class="icon" width="14" height="14"><use href="assets/app/icons.svg#shield-check"/></svg>
+        Verified before you view it
+      </span>
+      <h1>Find a home you can actually trust.</h1>
+      <p class="hero-sub">Search Nairobi listings with a Trust Ledger attached to every one — who owns it, whether it's been visited, and the true cost before you commit.</p>
+    </div>
+
+    <div class="search-card">
+      <div class="search-tabs">
+        <button class="search-tab active" data-tab="rent">Rent</button>
+        <button class="search-tab" data-tab="buy">Buy</button>
+      </div>
+      <div class="search-row">
+        <div class="search-input">
+          <svg class="icon" width="16" height="16"><use href="assets/app/icons.svg#map-pin"/></svg>
+          <input type="text" id="search-location" placeholder="Search location, estate or neighbourhood">
+        </div>
+        <button class="btn btn-primary btn-lg">
+          <svg class="icon" width="16" height="16"><use href="assets/app/icons.svg#search"/></svg>
+          Search
+        </button>
+      </div>
+      <div class="popular-searches">
+        <span class="ps-label">Popular:</span>
+        <button type="button" class="ps-chip" data-search="Bedsitters in Kasarani">Bedsitters in Kasarani</button>
+        <button type="button" class="ps-chip" data-search="1BR Kilimani – South B under KSh 28,000">1BR Kilimani–South B under 28k</button>
+        <button type="button" class="ps-chip" data-search="Studios in Ngara">Studios in Ngara</button>
+      </div>
+      <div class="search-badges">
+        <span><svg class="icon" width="14" height="14"><use href="assets/app/icons.svg#shield-check"/></svg> Every listing screened in person</span>
+        <span><svg class="icon" width="14" height="14"><use href="assets/app/icons.svg#check"/></svg> True cost upfront</span>
+        <span><svg class="icon" width="14" height="14"><use href="assets/app/icons.svg#star"/></svg> Security rating</span>
+      </div>
+    </div>
+
+    <dl class="hero-stats">
+      <div class="hero-stat"><dd>KSh 299</dd><p>Hunt Pass, 30-day search</p></div>
+      <div class="hero-stat"><dd>4</dd><p>Checkable ledger entries per listing</p></div>
+      <div class="hero-stat"><dd>Kilimani</dd><p>First neighbourhood piloting now</p></div>
+    </dl>
+    <p style="margin-top:18px; font-size:0.78rem; color:rgba(245,241,228,65%); max-width:32rem;">Concept demo — showing how the product will work as the first verified listings go live in Nairobi.</p>
+  </div>
+</section>
+
+<!-- ============ LISTINGS ============ -->
+<section class="section" id="listings">
+  <div class="section-head-row reveal">
+    <div>
+      <p class="eyebrow-label">Featured listings</p>
+      <h2>Verified homes, backed by a checkable Trust Ledger</h2>
+      <p class="section-desc">Every listing carries its ledger completion, true move-in cost and security detail, so you can compare with confidence.</p>
+    </div>
+    <div class="filter-row">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="rent">Rent</button>
+      <button class="filter-pill" data-filter="buy">Buy</button>
+    </div>
+  </div>
+
+  <div class="property-grid reveal-stagger" id="property-grid">
+
+    <article class="property-card" data-listing="rent">
+      <div class="property-media">
+        <img src="assets/app/properties/modern-apartment.jpg" alt="Kilimani Heights Apartments" loading="lazy" decoding="async">
+        <div class="property-badges">
+          <span class="badge badge-listing">For Rent</span>
+          <span class="badge badge-verified"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield-check"/></svg> Verified</span>
+        </div>
+        <button class="save-btn" aria-label="Save property"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#heart"/></svg></button>
+      </div>
+      <div class="property-body">
+        <div class="property-top">
+          <div>
+            <h3 class="property-title">Kilimani Heights Apartments</h3>
+            <p class="property-loc"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#map-pin"/></svg> Kilimani, Nairobi</p>
+          </div>
+          <div class="trust-dial" style="background:conic-gradient(#0A7568 360deg, var(--muted) 0deg)">
+            <div class="trust-dial-inner"><span class="trust-dial-num" style="color:#0A7568">4/4</span><span class="trust-dial-lbl">Ledger</span></div>
+          </div>
+        </div>
+        <div class="property-specs">
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bed"/></svg> 3</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bath"/></svg> 2</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#maximize"/></svg> 142 m²</span>
+        </div>
+        <div class="property-metrics">
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#check"/></svg> True cost</p>
+            <p class="metric-amt">KSh 291,500</p>
+            <p class="metric-sub">all-in, disclosed upfront</p>
+          </div>
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield"/></svg> Security</p>
+            <div class="stars">
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+            </div>
+            <p class="metric-value">5.0 rating</p>
+          </div>
+        </div>
+        <button type="button" class="ledger-chat-btn" data-property="kilimani-heights">
+          <svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#chat"/></svg> Ask the Trust Ledger
+        </button>
+        <div class="property-price-row">
+          <div><span class="property-price">KSh 95,000</span><span class="property-price-note">/month</span></div>
+          <a href="#" class="property-link" data-property="kilimani-heights">View details</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="property-card" data-listing="buy">
+      <div class="property-media">
+        <img src="assets/app/properties/suburban-villa.jpg" alt="Karen Grove Family Villa" loading="lazy" decoding="async">
+        <div class="property-badges">
+          <span class="badge badge-listing">For Sale</span>
+          <span class="badge badge-verified"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield-check"/></svg> Verified</span>
+        </div>
+        <button class="save-btn" aria-label="Save property"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#heart"/></svg></button>
+      </div>
+      <div class="property-body">
+        <div class="property-top">
+          <div>
+            <h3 class="property-title">Karen Grove Family Villa</h3>
+            <p class="property-loc"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#map-pin"/></svg> Karen, Nairobi</p>
+          </div>
+          <div class="trust-dial" style="background:conic-gradient(#0A7568 360deg, var(--muted) 0deg)">
+            <div class="trust-dial-inner"><span class="trust-dial-num" style="color:#0A7568">4/4</span><span class="trust-dial-lbl">Ledger</span></div>
+          </div>
+        </div>
+        <div class="property-specs">
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bed"/></svg> 5</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bath"/></svg> 4</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#maximize"/></svg> 480 m²</span>
+        </div>
+        <div class="property-metrics">
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#check"/></svg> True cost</p>
+            <p class="metric-amt">KSh 71.06M</p>
+            <p class="metric-sub">est. total, disclosed upfront</p>
+          </div>
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield"/></svg> Security</p>
+            <div class="stars">
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+            </div>
+            <p class="metric-value">5.0 rating</p>
+          </div>
+        </div>
+        <button type="button" class="ledger-chat-btn" data-property="karen-grove-villa">
+          <svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#chat"/></svg> Ask the Trust Ledger
+        </button>
+        <div class="property-price-row">
+          <div><span class="property-price">KSh 68,000,000</span><span class="property-price-note">sale</span></div>
+          <a href="#" class="property-link" data-property="karen-grove-villa">View details</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="property-card" data-listing="rent">
+      <div class="property-media">
+        <img src="assets/app/properties/gated-townhouse.jpg" alt="Riverside Court Townhouses" loading="lazy" decoding="async">
+        <div class="property-badges">
+          <span class="badge badge-listing">For Rent</span>
+          <span class="badge badge-verified"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield-check"/></svg> Verified</span>
+        </div>
+        <button class="save-btn" aria-label="Save property"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#heart"/></svg></button>
+      </div>
+      <div class="property-body">
+        <div class="property-top">
+          <div>
+            <h3 class="property-title">Riverside Court Townhouses</h3>
+            <p class="property-loc"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#map-pin"/></svg> Riverside, Nairobi</p>
+          </div>
+          <div class="trust-dial" style="background:conic-gradient(#0F9E8E 360deg, var(--muted) 0deg)">
+            <div class="trust-dial-inner"><span class="trust-dial-num" style="color:#0F9E8E">4/4</span><span class="trust-dial-lbl">Ledger</span></div>
+          </div>
+        </div>
+        <div class="property-specs">
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bed"/></svg> 4</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bath"/></svg> 3</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#maximize"/></svg> 310 m²</span>
+        </div>
+        <div class="property-metrics">
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#check"/></svg> True cost</p>
+            <p class="metric-amt">KSh 179,000</p>
+            <p class="metric-sub">all-in, disclosed upfront</p>
+          </div>
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield"/></svg> Security</p>
+            <div class="stars">
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:var(--muted)"><use href="assets/app/icons.svg#star"/></svg>
+            </div>
+            <p class="metric-value">4.0 rating</p>
+          </div>
+        </div>
+        <button type="button" class="ledger-chat-btn" data-property="riverside-townhouse">
+          <svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#chat"/></svg> Ask the Trust Ledger
+        </button>
+        <div class="property-price-row">
+          <div><span class="property-price">KSh 58,000</span><span class="property-price-note">/month</span></div>
+          <a href="#" class="property-link" data-property="riverside-townhouse">View details</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="property-card" data-listing="rent">
+      <div class="property-media">
+        <img src="assets/app/properties/city-penthouse.jpg" alt="Westlands Skyline Penthouse" loading="lazy" decoding="async">
+        <div class="property-badges">
+          <span class="badge badge-listing">For Rent</span>
+          <span class="badge badge-verified"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield-check"/></svg> Verified</span>
+        </div>
+        <button class="save-btn" aria-label="Save property"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#heart"/></svg></button>
+      </div>
+      <div class="property-body">
+        <div class="property-top">
+          <div>
+            <h3 class="property-title">Westlands Skyline Penthouse</h3>
+            <p class="property-loc"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#map-pin"/></svg> Westlands, Nairobi</p>
+          </div>
+          <div class="trust-dial" style="background:conic-gradient(#0A7568 360deg, var(--muted) 0deg)">
+            <div class="trust-dial-inner"><span class="trust-dial-num" style="color:#0A7568">4/4</span><span class="trust-dial-lbl">Ledger</span></div>
+          </div>
+        </div>
+        <div class="property-specs">
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bed"/></svg> 4</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bath"/></svg> 3</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#maximize"/></svg> 220 m²</span>
+        </div>
+        <div class="property-metrics">
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#check"/></svg> True cost</p>
+            <p class="metric-amt">KSh 503,000</p>
+            <p class="metric-sub">all-in, disclosed upfront</p>
+          </div>
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield"/></svg> Security</p>
+            <div class="stars">
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+            </div>
+            <p class="metric-value">5.0 rating</p>
+          </div>
+        </div>
+        <button type="button" class="ledger-chat-btn" data-property="westlands-penthouse">
+          <svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#chat"/></svg> Ask the Trust Ledger
+        </button>
+        <div class="property-price-row">
+          <div><span class="property-price">KSh 165,000</span><span class="property-price-note">/month</span></div>
+          <a href="#" class="property-link" data-property="westlands-penthouse">View details</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="property-card" data-listing="buy">
+      <div class="property-media">
+        <img src="assets/app/properties/garden-bungalow.jpg" alt="Runda Garden Bungalow" loading="lazy" decoding="async">
+        <div class="property-badges">
+          <span class="badge badge-listing">For Sale</span>
+        </div>
+        <button class="save-btn" aria-label="Save property"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#heart"/></svg></button>
+      </div>
+      <div class="property-body">
+        <div class="property-top">
+          <div>
+            <h3 class="property-title">Runda Garden Bungalow</h3>
+            <p class="property-loc"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#map-pin"/></svg> Runda, Nairobi</p>
+          </div>
+          <div class="trust-dial" style="background:conic-gradient(var(--muted-foreground) 180deg, var(--muted) 0deg)">
+            <div class="trust-dial-inner"><span class="trust-dial-num" style="color:var(--muted-foreground)">2/4</span><span class="trust-dial-lbl">Ledger</span></div>
+          </div>
+        </div>
+        <div class="property-specs">
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bed"/></svg> 4</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bath"/></svg> 3</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#maximize"/></svg> 365 m²</span>
+        </div>
+        <div class="property-metrics">
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#check"/></svg> True cost</p>
+            <p class="metric-amt">KSh 44.4M</p>
+            <p class="metric-sub">est. total · visit pending</p>
+          </div>
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield"/></svg> Security</p>
+            <div class="stars">
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:var(--muted)"><use href="assets/app/icons.svg#star"/></svg>
+            </div>
+            <p class="metric-value">4.0 rating</p>
+          </div>
+        </div>
+        <button type="button" class="ledger-chat-btn" data-property="runda-bungalow">
+          <svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#chat"/></svg> Ask the Trust Ledger
+        </button>
+        <div class="property-price-row">
+          <div><span class="property-price">KSh 42,500,000</span><span class="property-price-note">sale</span></div>
+          <a href="#" class="property-link" data-property="runda-bungalow">View details</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="property-card" data-listing="rent">
+      <div class="property-media">
+        <img src="assets/app/properties/urban-studio.jpg" alt="Ngara Urban Studios" loading="lazy" decoding="async">
+        <div class="property-badges">
+          <span class="badge badge-listing">For Rent</span>
+          <span class="badge badge-verified"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield-check"/></svg> Verified</span>
+        </div>
+        <button class="save-btn" aria-label="Save property"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#heart"/></svg></button>
+      </div>
+      <div class="property-body">
+        <div class="property-top">
+          <div>
+            <h3 class="property-title">Ngara Urban Studios</h3>
+            <p class="property-loc"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#map-pin"/></svg> Ngara, Nairobi</p>
+          </div>
+          <div class="trust-dial" style="background:conic-gradient(#0F9E8E 360deg, var(--muted) 0deg)">
+            <div class="trust-dial-inner"><span class="trust-dial-num" style="color:#0F9E8E">4/4</span><span class="trust-dial-lbl">Ledger</span></div>
+          </div>
+        </div>
+        <div class="property-specs">
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bed"/></svg> 1</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#bath"/></svg> 1</span>
+          <span><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#maximize"/></svg> 38 m²</span>
+        </div>
+        <div class="property-metrics">
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#check"/></svg> True cost</p>
+            <p class="metric-amt">KSh 41,700</p>
+            <p class="metric-sub">all-in, disclosed upfront</p>
+          </div>
+          <div class="metric-box">
+            <p class="metric-label"><svg class="icon" width="12" height="12"><use href="assets/app/icons.svg#shield"/></svg> Security</p>
+            <div class="stars">
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:#0A7568"><use href="assets/app/icons.svg#star"/></svg>
+              <svg class="icon star" style="color:var(--muted)"><use href="assets/app/icons.svg#star"/></svg>
+            </div>
+            <p class="metric-value">4.0 rating</p>
+          </div>
+        </div>
+        <button type="button" class="ledger-chat-btn" data-property="ngara-studio">
+          <svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#chat"/></svg> Ask the Trust Ledger
+        </button>
+        <div class="property-price-row">
+          <div><span class="property-price">KSh 13,500</span><span class="property-price-note">/month</span></div>
+          <a href="#" class="property-link" data-property="ngara-studio">View details</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ BROWSE BY NEIGHBOURHOOD ============ -->
+<section class="section" id="neighbourhoods" style="padding-top:0;">
+  <div class="section-center reveal">
+    <p class="eyebrow-label">Browse by neighbourhood</p>
+    <h2>Verification moves area by area</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto;">We verify one walkable neighbourhood at a time, so the ledger is deep where it exists — not thin everywhere.</p>
+  </div>
+  <div class="hood-grid reveal-stagger">
+    <button type="button" class="hood-card pilot" data-search="Kilimani">
+      <span class="hood-tag">Pilot neighbourhood</span>
+      <span class="hood-name">Kilimani</span>
+      <span class="hood-stat">1 verified listing · from KSh 95,000/mo</span>
+    </button>
+    <button type="button" class="hood-card" data-search="Ngara">
+      <span class="hood-name">Ngara</span>
+      <span class="hood-stat">1 verified listing · from KSh 13,500/mo</span>
+    </button>
+    <button type="button" class="hood-card" data-search="Riverside">
+      <span class="hood-name">Riverside</span>
+      <span class="hood-stat">1 verified listing · from KSh 58,000/mo</span>
+    </button>
+    <button type="button" class="hood-card" data-search="Westlands">
+      <span class="hood-name">Westlands</span>
+      <span class="hood-stat">1 verified listing · from KSh 165,000/mo</span>
+    </button>
+    <button type="button" class="hood-card" data-search="Karen">
+      <span class="hood-name">Karen</span>
+      <span class="hood-stat">1 verified listing · for sale from KSh 68M</span>
+    </button>
+    <button type="button" class="hood-card" data-search="Runda">
+      <span class="hood-name">Runda</span>
+      <span class="hood-stat">1 listing · verification in progress</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ HUNT REQUEST (scout concept) ============ -->
+<section class="section" id="huntrequest" style="padding-top:0;">
+  <div class="hunt-card reveal">
+    <div class="hunt-copy">
+      <p class="eyebrow-label">Can't find it?</p>
+      <h2>Tell us what you're hunting for</h2>
+      <p class="section-desc">Our verification team walks the area, verifies matching listings first, and sends you their Trust Ledgers on WhatsApp — before they're public.</p>
+    </div>
+    <form class="hunt-form" id="hunt-form" data-demo-form>
+      <input type="text" class="field-input" id="hunt-area" placeholder="Area — e.g. Kilimani, South B, Kasarani">
+      <select class="field-input" id="hunt-budget">
+        <option value="" disabled selected>Monthly budget (KSh)</option>
+        <option>Below 20,000</option>
+        <option>20,000 – 40,000</option>
+        <option>40,000 – 70,000</option>
+        <option>Above 70,000</option>
+      </select>
+      <div class="hunt-timeline">
+        <span class="ps-label">Moving:</span>
+        <button type="button" class="ps-chip hunt-when active">Ready now</button>
+        <button type="button" class="ps-chip hunt-when">Within 30 days</button>
+        <button type="button" class="ps-chip hunt-when">Flexible</button>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Send hunt request</button>
+      <p class="demo-note" id="hunt-confirm">Request received (demo). In the live product this goes straight to the verification team for your area — they verify matching listings and send you the Trust Ledgers on WhatsApp first.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ TRUST PILLARS ============ -->
+<section class="trust-band" id="trust">
+  <div class="section">
+    <div class="section-center reveal">
+      <p class="eyebrow-label">Why NyumbaIQ</p>
+      <h2>A ledger, not a score</h2>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto;">Four specific, checkable facts on every listing — not a percentage someone made up.</p>
+    </div>
+    <div class="pillar-grid reveal-stagger">
+      <div class="pillar-card">
+        <span class="pillar-icon accent"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#shield-check"/></svg></span>
+        <h3>Identity confirmed</h3>
+        <p>The landlord's identity is confirmed by phone against their national ID before a listing goes live — today, done manually by our team.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon primary"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#home"/></svg></span>
+        <h3>Unit visited in person</h3>
+        <p>Someone from our team visits the unit, confirms it matches the listing, and records its real condition and security detail.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon accent"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#shield"/></svg></span>
+        <h3>Cost disclosed upfront</h3>
+        <p>Rent, deposit, water, garbage and service charge — the true, all-in cost before you commit, not a figure that grows after you've signed.</p>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon primary"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#users"/></svg></span>
+        <h3>Tenant reviews</h3>
+        <p>Reviews from people who actually lived there — a record of the landlord's track record, not an anonymous star rating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TENANT VOICES ============ -->
+<section class="section" id="voices">
+  <div class="section-center reveal">
+    <p class="eyebrow-label">From the ledger</p>
+    <h2>What verified tenants say</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto;">Every review in a Trust Ledger comes from someone who actually lived there — not an anonymous star rating.</p>
+  </div>
+  <div class="voices-grid reveal-stagger">
+    <div class="voice-card pillar-card">
+      <p class="voice-quote">"The ledger showed exactly who the landlord was. I paid the deposit without that knot in my stomach."</p>
+      <p class="voice-who"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#shield-check"/></svg> Verified tenant · Kilimani Heights</p>
+    </div>
+    <div class="voice-card pillar-card">
+      <p class="voice-quote">"I knew the full cost before I called. Nobody asked me for a 'viewing fee'."</p>
+      <p class="voice-who"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#shield-check"/></svg> Verified tenant · Ngara Urban Studios</p>
+    </div>
+    <div class="voice-card pillar-card">
+      <p class="voice-quote">"What was listed is what I found when I walked in. That's never happened to me before."</p>
+      <p class="voice-who"><svg class="icon" width="13" height="13"><use href="assets/app/icons.svg#shield-check"/></svg> Verified tenant · Riverside Court</p>
+    </div>
+  </div>
+  <p class="chat-foot-note" style="border:none; background:transparent; margin-top:0.5rem;">Concept demo — illustrative of the review layer as first verified tenancies complete.</p>
+</section>
+
+<!-- ============ AI SCAM CHECK (concept) ============ -->
+<section class="section" id="scamcheck">
+  <div class="section-center reveal">
+    <p class="eyebrow-label">AI · Concept preview</p>
+    <h2>Check a number before you call it</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto;">Paste any phone number or listing link. The AI cross-references it against the Trust Ledger network and flags known scam patterns — before a shilling moves.</p>
+  </div>
+  <div class="scamcheck-card reveal">
+    <div class="sc-input-row">
+      <input type="text" id="sc-input" class="field-input" placeholder="Paste a phone number or listing link…">
+      <button type="button" class="btn btn-primary btn-lg" id="sc-run">Run Scam Check</button>
+    </div>
+    <div class="sc-samples">
+      <span class="ps-label">Try:</span>
+      <button type="button" class="ps-chip sc-sample" data-sample="risk">0712 345 678</button>
+      <button type="button" class="ps-chip sc-sample" data-sample="ok">+254 700 111 222</button>
+      <button type="button" class="ps-chip sc-sample" data-sample="unknown">a Facebook Marketplace link</button>
+    </div>
+    <div class="sc-result" id="sc-result"></div>
+    <p class="chat-foot-note" style="border-top:none; background:transparent;">Concept demo — verdicts are scripted examples of how the AI layer will read the Trust Ledger network.</p>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="section-center reveal">
+    <p class="eyebrow-label">Pricing</p>
+    <h2>Paid per search, not by the month</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto;">Nobody hunts for housing every month, so the model doesn't pretend otherwise.</p>
+  </div>
+  <div class="price-cards reveal">
+    <div class="price-card">
+      <p class="pc-eyebrow">Browse</p>
+      <p class="pc-figure">Free</p>
+      <ul>
+        <li>Search every listed property</li>
+        <li>See ledger completion at a glance</li>
+        <li>Basic listing details</li>
+      </ul>
+    </div>
+    <div class="price-card dark">
+      <p class="pc-eyebrow">Hunt Pass</p>
+      <p class="pc-figure">KSh 299 <small>/ 30-day search</small></p>
+      <ul>
+        <li>Full Trust Ledger on every listing</li>
+        <li>Itemised, guaranteed move-in cost</li>
+        <li>Verified tenant reviews</li>
+        <li>Paid by M-Pesa</li>
+      </ul>
+      <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top:1.25rem;" onclick="document.getElementById('property-grid').scrollIntoView({behavior:'smooth'})">Start hunting →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROLES ============ -->
+<section class="section" id="roles">
+  <div class="section-center reveal">
+    <p class="eyebrow-label">Who we serve, in order</p>
+    <h2>Each stage only works once the one before it does</h2>
+    <p class="section-desc" style="margin-left:auto;margin-right:auto;">Renters and buyers first — the most frequent, most painful version of the trust gap. Landlords and agencies join the same ledger once that side is real, not before.</p>
+  </div>
+  <div class="role-grid reveal-stagger">
+    <a href="auth.html" class="role-card">
+      <span class="role-icon"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#users"/></svg></span>
+      <div><h3>01 · House hunters</h3><p>Renters and buyers verifying a listing before they commit a deposit. This is where NyumbaIQ starts.</p></div>
+    </a>
+    <a href="auth.html" class="role-card">
+      <span class="role-icon"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#home"/></svg></span>
+      <div><h3>02 · Individual landlords</h3><p>The same Trust Ledger, sold back to them — a verified landlord attracts serious tenants faster.</p></div>
+    </a>
+    <a href="auth.html" class="role-card">
+      <span class="role-icon"><svg class="icon" width="20" height="20"><use href="assets/app/icons.svg#handshake"/></svg></span>
+      <div><h3>03 · Managing agencies</h3><p>Qualified tenant leads once real search volume exists — we stay in trust and verification, not rent collection.</p></div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CTA + FOOTER ============ -->
+<section class="section" id="signup" style="padding-top:0">
+  <div class="cta-banner reveal">
+    <h2>Ready to make a property decision you can trust?</h2>
+    <p>Join renters, buyers and landlords using a checkable Trust Ledger to move with confidence — starting in Kilimani, Nairobi.</p>
+    <div class="cta-actions">
+      <a href="auth.html" class="btn btn-secondary btn-lg">Create free account</a>
+      <a href="#listings" class="btn btn-on-primary btn-lg">Browse listings</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg class="icon" width="26" height="26"><use href="assets/app/icons.svg#logo"/></svg></span>
+          <span class="brand-name">Nyumba<span>IQ</span></span>
+        </a>
+        <p>The trust layer for Kenyan real estate — renters and buyers first, then the landlords and agencies who need their trust.</p>
+        <p class="footer-verified"><svg class="icon" width="15" height="15"><use href="assets/app/icons.svg#shield-check"/></svg> Verified by a real person, not an algorithm</p>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul><li><a href="#listings">Rent</a></li><li><a href="#listings">Buy</a></li><li><a href="#pricing">Hunt Pass pricing</a></li><li><a href="#scamcheck">Scam Check</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul><li><a href="index.html">About NyumbaIQ</a></li><li><a href="#trust">How verification works</a></li><li><a href="pitch.html">The full pitch</a></li><li><a href="#roles">Who we serve</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h3>Get started</h3>
+        <ul><li><a href="index.html#waitlist">Join the waitlist</a></li><li><a href="auth.html">Create an account</a></li><li><a href="auth.html">List a property</a></li><li><a href="#scamcheck">Check a suspicious number</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h3>The team</h3>
+        <ul><li><a href="index.html#team">Built in Nairobi</a></li><li><a href="pitch.html#traction">Where we stand today</a></li><li><a href="pitch.html#evidence">Our research</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NyumbaIQ. All rights reserved.</p>
+      <p>Built for a more trustworthy property market. · <a href="pitch.html" style="color:var(--primary);font-weight:600;">See the full pitch →</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LISTING DETAIL MODAL ============ -->
+<div class="chat-overlay" id="detail-overlay">
+  <div class="chat-modal">
+    <div class="chat-modal-head">
+      <div>
+        <div class="chm-title" id="detail-title">Listing</div>
+        <div class="chm-sub" id="detail-ref">Trust Ledger record</div>
+      </div>
+      <button type="button" class="chat-close-btn" id="detail-close" aria-label="Close details">
+        <svg class="icon" width="16" height="16"><use href="assets/app/icons.svg#x"/></svg>
+      </button>
+    </div>
+    <div class="detail-body" id="detail-body"></div>
+    <p class="chat-foot-note">Concept demo — record structure shown with illustrative data.</p>
+  </div>
+</div>
+
+<!-- ============ TRUST CHAT MODAL ============ -->
+<div class="chat-overlay" id="chat-overlay">
+  <div class="chat-modal">
+    <div class="chat-modal-head">
+      <div>
+        <div class="chm-title" id="chat-title">Trust Ledger</div>
+        <div class="chm-sub">Ask about this listing</div>
+      </div>
+      <button type="button" class="chat-close-btn" id="chat-close" aria-label="Close chat">
+        <svg class="icon" width="16" height="16"><use href="assets/app/icons.svg#x"/></svg>
+      </button>
+    </div>
+    <div class="chat-body" id="chat-body"></div>
+    <div class="chat-chips" id="chat-chips"></div>
+    <p class="chat-foot-note">Concept demo — answers are scripted from this listing's real ledger data, not a live AI backend.</p>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The full pitch — NyumbaIQ</title>
+<meta name="description" content="NyumbaIQ's full pitch: the problem, the mechanism, market opportunity, competitive landscape, business model, and where we honestly stand today." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.pitch-header{
+  background:var(--ink); color:var(--cream-text); padding:150px 0 70px;
+}
+.pitch-header .eyebrow{ color:#8fbdb5; }
+.pitch-header h1{
+  margin-top:16px; font-family:var(--display); font-weight:300; color:#F5F1E4;
+  font-size:clamp(2.2rem, 5vw, 3.6rem); max-width:20ch;
+}
+.pitch-header p{ margin-top:20px; max-width:60ch; color:#aebcc4; font-size:1.05rem; line-height:1.6; }
+.pitch-jump{ margin-top:36px; display:flex; flex-wrap:wrap; gap:10px; }
+.pitch-jump a{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.04em; text-transform:uppercase;
+  color:#c3cfd6; border:1px solid rgba(245,241,228,0.18); padding:8px 14px;
+}
+.pitch-jump a:hover{ border-color:#8fbdb5; color:#8fbdb5; }
+</style>
+</head>
+<body>
+
+<nav class="nav" style="position:static; background:var(--ink);">
+  <div class="nav-mark">
+    <svg class="logo-mark" width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+      <path d="M13 20.5l5 5l9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    NyumbaIQ
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Landing page</a>
+    <a href="app.html" class="nav-cta">The Product →</a>
+  </div>
+</nav>
+
+<!-- ============ PITCH HEADER ============ -->
+<header class="pitch-header">
+  <div class="wrap">
+    <span class="eyebrow">The full pitch</span>
+    <h1>Why NyumbaIQ exists, and exactly where it stands today.</h1>
+    <p>Everything a judge or investor would ask: the problem, the mechanism, who we serve and in what order, the size of the market, how we make money, and an honest account of our traction. Nothing here is rounded up.</p>
+    <div class="pitch-jump">
+      <a href="#persona">Who this is for</a>
+      <a href="#evidence">The evidence</a>
+      <a href="#market">Market opportunity</a>
+      <a href="#competitive">Competitive landscape</a>
+      <a href="#gtm">Go-to-market</a>
+      <a href="#model">Business model</a>
+      <a href="#traction">Traction</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROBLEM ============ -->
+<section class="beat paper">
+  <div class="wrap">
+    <span class="eyebrow">01 · The problem</span>
+    <h2 style="margin-top:16px;">Renters can't verify who they're about to pay.</h2>
+    <p style="margin-top:22px; max-width:60ch; color:var(--ink-soft); font-size:1.05rem; line-height:1.65;">Before paying, a renter in urban Kenya has no way to check whether a listing, an agent, or a landlord is genuine. That forces a choice: walk from estate to estate looking for physical "to let" signs, or trust an unverified listing and risk a deposit on someone with no real relationship to the property.</p>
+    <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px; background:var(--brass-line); border:1px solid var(--brass-line);">
+      <div style="background:#FBF8EF; padding:28px 26px;">
+        <div style="font-family:var(--mono); font-size:10.5px; color:var(--brass); text-transform:uppercase;">No.1</div>
+        <h3 style="margin-top:10px; font-size:1.05rem;">No accountable identity</h3>
+        <p style="margin-top:10px; font-size:0.92rem; color:var(--ink-soft); line-height:1.5;">Anyone can post a photo and a phone number, with no check they're who they claim or have any legal relationship to the property.</p>
+      </div>
+      <div style="background:#FBF8EF; padding:28px 26px;">
+        <div style="font-family:var(--mono); font-size:10.5px; color:var(--brass); text-transform:uppercase;">No.2</div>
+        <h3 style="margin-top:10px; font-size:1.05rem;">No visibility into true cost</h3>
+        <p style="margin-top:10px; font-size:0.92rem; color:var(--ink-soft); line-height:1.5;">Deposit, agent fees, water, garbage and service charges surface piecemeal — sometimes only after a "viewing fee" is already paid.</p>
+      </div>
+      <div style="background:#FBF8EF; padding:28px 26px;">
+        <div style="font-family:var(--mono); font-size:10.5px; color:var(--brass); text-transform:uppercase;">No.3</div>
+        <h3 style="margin-top:10px; font-size:1.05rem;">No memory of bad actors</h3>
+        <p style="margin-top:10px; font-size:0.92rem; color:var(--ink-soft); line-height:1.5;">A landlord or agent who scams one tenant faces no consequence, and can relist under a new number the following week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTION / MECHANISM ============ -->
+<section class="beat deep">
+  <div class="wrap">
+    <span class="eyebrow">02 · The solution</span>
+    <h2 style="margin-top:16px;">A Trust Ledger, not an invented score.</h2>
+    <p style="margin-top:22px; max-width:60ch; color:var(--ink-soft); font-size:1.05rem; line-height:1.65;">Every listing carries a timestamped, specific record of real actions taken to confirm it's genuine: landlord identity confirmed against national ID, the unit visited in person, the full cost disclosed upfront, and reviews from tenants who actually lived there. A score like "91% trusted" can't be checked — nobody knows how it was calculated. Every line in a ledger is a specific, falsifiable claim instead.</p>
+    <p style="margin-top:26px; font-family:var(--display); font-style:italic; font-size:1.2rem; color:var(--ink); max-width:32ch;">A ledger can be checked. A score can only be believed.</p>
+    <p style="margin-top:30px; max-width:60ch; color:var(--ink-soft); font-size:0.95rem; line-height:1.6;"><strong style="color:var(--ink);">Today, honestly:</strong> verification is manual. Our team confirms identity by phone against a national ID, visits units in person, and records true cost directly from landlord and tenant. This doesn't scale infinitely yet — it's the only version of verification that's fully true from day one, designed to scale in stages as volume grows.</p>
+  </div>
+</section>
+
+<!-- ============ PERSONA ============ -->
+<section class="persona-section" id="persona">
+  <div class="wrap persona-grid">
+    <div class="persona-card">
+      <div class="p-name">James Mwangi</div>
+      <div class="p-tag">Age 26 · Junior software developer</div>
+      <div class="persona-facts">
+        <div class="pf-row"><span class="pf-label">Income</span><span class="pf-val">KSh 65,000 / month</span></div>
+        <div class="pf-row"><span class="pf-label">Currently</span><span class="pf-val">Bedsitter, Kasarani</span></div>
+        <div class="pf-row"><span class="pf-label">Looking for</span><span class="pf-val">1BR, Kilimani–South B</span></div>
+        <div class="pf-row"><span class="pf-label">Budget</span><span class="pf-val">KSh 20,000–28,000</span></div>
+        <div class="pf-row"><span class="pf-label">Already lost</span><span class="pf-val">KSh 3,000 to a fake "viewing fee"</span></div>
+      </div>
+    </div>
+    <div class="persona-text">
+      <span class="eyebrow">03 · Who this is for</span>
+      <h2>James isn't searching for a house.</h2>
+      <p>He's eight months into his first real job, tired of a three-hour commute, and has already lost KSh 3,000 to someone who wasn't even the agent. On a normal Saturday he scrolls Facebook groups, calls three numbers, and walks estates looking for physical "to let" signs — because a sign feels more real than a phone number.</p>
+      <p class="callout">He is searching for someone he can actually trust with his deposit.</p>
+      <div class="persona-math">
+        <div class="pm-item"><div class="pm-num">KSh 3,000</div><div class="pm-lbl">Already lost</div></div>
+        <span class="pm-arrow">→</span>
+        <div class="pm-item"><div class="pm-num">KSh 299</div><div class="pm-lbl">Hunt Pass</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVIDENCE ============ -->
+<section class="proof" id="evidence">
+  <div class="wrap">
+    <div class="proof-head">
+      <span class="eyebrow">04 · The evidence</span>
+      <h2>The gap is measured, not assumed.</h2>
+      <p>A structured survey of 25 respondents and more than 30 direct interviews with renters actively hunting for housing, combined with independent Kenyan market data.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="figure">80%</div>
+        <p class="cap">of urban households cannot fully afford rent in a given year.</p>
+        <p class="src">Source · Kenya National Bureau of Statistics</p>
+      </div>
+      <div class="stat">
+        <div class="figure">68%</div>
+        <p class="cap">of Kenyans lack secure land or property documentation.</p>
+        <p class="src">Source · Habitat for Humanity Kenya, 2026</p>
+      </div>
+      <div class="stat">
+        <div class="figure">4×</div>
+        <p class="cap">the gap between annual housing demand and new supply: 250,000 units needed, only 50,000 built each year.</p>
+        <p class="src">Source · Habitat for Humanity Kenya, 2026</p>
+      </div>
+      <div class="stat">
+        <div class="figure">3-in-4</div>
+        <p class="cap">respondents said they do not trust the property information they currently find online.</p>
+        <p class="src">Source · NyumbaIQ primary field research</p>
+      </div>
+      <div class="stat">
+        <div class="figure">3-in-5</div>
+        <p class="cap">respondents said finding a suitable home is difficult or very difficult.</p>
+        <p class="src">Source · NyumbaIQ primary field research</p>
+      </div>
+      <div class="stat">
+        <div class="figure">4-in-5</div>
+        <p class="cap">respondents said they would pay to confirm a house or landlord is genuine before committing.</p>
+        <p class="src">Source · NyumbaIQ primary field research</p>
+      </div>
+    </div>
+    <p style="margin-top:36px; max-width:64ch; color:#aebcc4; font-size:0.9rem; line-height:1.6;">What this validates, and what it doesn't: this confirms the problem is real and widely felt, and that people are willing in principle to pay for verification. It does not yet confirm purchase behaviour at scale — our evidence is survey- and interview-based, not transaction-based. The honest next test is whether real strangers complete an actual KSh 299 payment.</p>
+  </div>
+</section>
+
+<!-- ============ MARKET OPPORTUNITY ============ -->
+<section class="market-section" id="market">
+  <div class="wrap">
+    <div class="market-head">
+      <span class="eyebrow">05 · Market opportunity</span>
+      <h2>Built bottom-up, not borrowed.</h2>
+      <p>Every figure below is derived from population data and a conservative rent estimate, kept deliberately separate from NyumbaIQ's own fee-based revenue model. This is the size of the market we operate inside, not a projection of what we will earn.</p>
+    </div>
+    <div class="market-inputs">
+      Urban Kenya population (2026): <strong>~19.1M</strong> · Share who rent: <strong>73%</strong> · Nairobi metro population: <strong>~5.77M</strong> · Assumed average monthly rent, mid-to-low segment: <strong>KSh 15,000</strong> (bedsitters and 1BR units, deliberately conservative)
+    </div>
+    <div class="tam-sam-som">
+      <div class="tss-row">
+        <span class="tss-label">TAM</span>
+        <span class="tss-desc"><b>~13.96M</b> urban renters nationwide — the full category NyumbaIQ's trust layer touches.</span>
+        <span class="tss-figure">~KSh 2.51T /yr</span>
+      </div>
+      <div class="tss-row">
+        <span class="tss-label">SAM</span>
+        <span class="tss-desc"><b>~4.21M</b> renters in Nairobi metro — where NyumbaIQ actually operates first.</span>
+        <span class="tss-figure">~KSh 758B /yr</span>
+      </div>
+      <div class="tss-row som">
+        <span class="tss-label">SOM</span>
+        <span class="tss-desc"><b>5,000</b> paying Hunt Pass purchases, conservative Year 1 target in Nairobi. Modeled on paying searchers, not a share of rent.</span>
+        <span class="tss-figure">~KSh 1.5M /yr</span>
+      </div>
+    </div>
+    <p class="market-note">SOM looks small next to TAM and SAM on purpose. Those describe the market's size; they are not a promise of revenue. As trust grows and landlords and agencies join as second and third revenue layers, SOM grows independently of these two figures.</p>
+  </div>
+</section>
+
+<!-- ============ COMPETITIVE LANDSCAPE (generic, no names) ============ -->
+<section class="compete-section" id="competitive">
+  <div class="wrap">
+    <div class="compete-head">
+      <span class="eyebrow">06 · Competitive landscape</span>
+      <h2>Everyone competes on inventory. Nobody competes on trust.</h2>
+      <p>No current Kenyan platform combines a searchable listing with a checkable verification record and an itemised true cost shown before commitment. That's the open space.</p>
+    </div>
+    <div class="compete-grid">
+      <div class="compete-card">
+        <span class="cc-eyebrow">Existing listing apps</span>
+        <h3>Forty-plus, and counting</h3>
+        <ul>
+          <li>Compete on inventory volume and search filters</li>
+          <li>No verifiable identity attached to any listing</li>
+          <li>No checkable history behind a landlord or agent</li>
+          <li>Revenue: advertising and agent subscriptions</li>
+        </ul>
+      </div>
+      <div class="compete-card highlight">
+        <span class="cc-eyebrow">NyumbaIQ</span>
+        <h3>The trust layer, not another listings app</h3>
+        <ul>
+          <li>Competes on whether the listing can be trusted</li>
+          <li>Every listing carries a checkable Trust Ledger</li>
+          <li>Itemised true cost disclosed before commitment</li>
+          <li>Revenue: per-search Hunt Pass, not ad-driven</li>
+        </ul>
+      </div>
+      <div class="compete-card">
+        <span class="cc-eyebrow">Adjacent, not competing</span>
+        <h3>Rent collection & property management tools</h3>
+        <ul>
+          <li>Operate after a landlord already has a tenant</li>
+          <li>NyumbaIQ operates before that relationship exists</li>
+          <li>Seen as future integration partners, not rivals</li>
+          <li>We stay in trust and verification only</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO WE SERVE ============ -->
+<section class="beat paper">
+  <div class="wrap">
+    <span class="eyebrow">07 · Who we serve, in order</span>
+    <h2 style="margin-top:16px;">Renters first. Then everyone who needs them to trust the system.</h2>
+    <p style="margin-top:22px; max-width:62ch; color:var(--ink-soft); font-size:1.05rem; line-height:1.65;">Each stage only works once the one before it is already working. <strong>First, house hunters</strong> — renters and buyers, the most frequent, most painful version of the trust gap. <strong>Second, individual landlords</strong> — the same Trust Ledger sold back to them, since a verified landlord attracts serious tenants faster. <strong>Third, managing agencies</strong> — verified leads once real search volume exists. We don't build rent collection, mortgage tools, an off-plan marketplace, investor dashboards, or social features yet. None of those strengthen the Trust Ledger today, so they wait.</p>
+  </div>
+</section>
+
+<!-- ============ GO-TO-MARKET ============ -->
+<section class="gtm-section" id="gtm">
+  <div class="wrap">
+    <div class="gtm-head">
+      <span class="eyebrow">08 · Go-to-market</span>
+      <h2>Four phases. Each one a precondition for the next.</h2>
+      <p>Not run in parallel. Each phase only starts once the one before it is already working.</p>
+    </div>
+    <div class="gtm-grid">
+      <div class="gtm-card">
+        <div class="gc-num">01</div>
+        <h3>Manual verification, one Nairobi neighbourhood</h3>
+        <p>Verify listings by hand in a single walkable cluster: phone confirmation of identity, in-person unit visits, direct cost confirmation.</p>
+      </div>
+      <div class="gtm-card">
+        <div class="gc-num">02</div>
+        <h3>Renter acquisition through the pain point</h3>
+        <p>Reach renters where they already search — Facebook and WhatsApp groups — leading with the fraud story, not a feature list.</p>
+      </div>
+      <div class="gtm-card">
+        <div class="gc-num">03</div>
+        <h3>Landlord onboarding, once demand is proven</h3>
+        <p>Approach individual landlords with real usage data showing tenant interest, not a cold pitch to a hypothetical audience.</p>
+      </div>
+      <div class="gtm-card">
+        <div class="gc-num">04</div>
+        <h3>Agency partnerships</h3>
+        <p>Once volume is meaningful, offer managing agencies qualified leads — a source of serious tenants, not a threat to their tools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS MODEL ============ -->
+<section class="pricing-section" id="model">
+  <div class="wrap">
+    <div class="pricing-head">
+      <span class="eyebrow">09 · Business model</span>
+      <h2>Paid per search, not by the month.</h2>
+      <p>Nobody hunts for housing every month, so the model does not pretend otherwise.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-plate">
+        <div class="pp-eyebrow">Browse</div>
+        <div class="pp-figure">Free</div>
+        <ul>
+          <li>Search every listed property</li>
+          <li>See verification status at a glance</li>
+          <li>Basic listing details</li>
+        </ul>
+      </div>
+      <div class="price-plate dark">
+        <div class="pp-eyebrow">Hunt Pass</div>
+        <div class="pp-figure">KSh 299 <small>/ 30-day search</small></div>
+        <ul>
+          <li>Full ledger on every listing</li>
+          <li>Itemised, guaranteed move-in cost</li>
+          <li>Verified tenant reviews</li>
+          <li>Paid by M-Pesa</li>
+        </ul>
+      </div>
+    </div>
+    <p class="market-note" style="margin-top:36px;">Landlord and agency revenue layers come later, not now — sequenced deliberately after tenant-side trust is proven. Conservative Year 1 target: 5,000 Hunt Pass purchases in Nairobi, ~KSh 1.5M. Base case: 15,000 purchases, ~KSh 4.5M. Optimistic case: 35,000 purchases, ~KSh 10.5M — all Nairobi-only, Year 1.</p>
+  </div>
+</section>
+
+<!-- ============ TRACTION ============ -->
+<section class="traction-section" id="traction">
+  <div class="wrap">
+    <div class="traction-head">
+      <span class="eyebrow">10 · Traction and milestones</span>
+      <h2>Early stage, stated honestly.</h2>
+      <p>This is a validated concept, not a live product with users — and we'd rather show you exactly where it stands than round up.</p>
+    </div>
+    <div class="traction-grid">
+      <div class="traction-col today">
+        <h3>What exists today</h3>
+        <div class="traction-item"><span class="t-dot"></span>A complete, functioning showcase explaining the problem, the mechanism, and the pricing model</div>
+        <div class="traction-item"><span class="t-dot"></span>A documented Trust Ledger concept with a full working example</div>
+        <div class="traction-item"><span class="t-dot"></span>Real primary research already completed: 25 survey respondents, 30+ interviews</div>
+        <div class="traction-item"><span class="t-dot"></span>A defined, sequenced go-to-market plan starting in a single Nairobi neighbourhood</div>
+      </div>
+      <div class="traction-col next">
+        <h3>What doesn't exist yet</h3>
+        <div class="traction-item"><span class="t-dot"></span>Zero real verified listings are live</div>
+        <div class="traction-item"><span class="t-dot"></span>No paying customer has completed a transaction yet</div>
+        <div class="traction-item"><span class="t-dot"></span>Landlord onboarding has not started</div>
+      </div>
+    </div>
+    <p class="traction-honest">Near-term milestones, in order: complete manual verification of an initial set of real listings in one Nairobi neighbourhood; convert the first 100 paying Hunt Pass users from that same neighbourhood; use that real usage data to begin landlord conversations. Each is a precondition for the next, not a parallel workstream.</p>
+  </div>
+</section>
+
+<!-- ============ THE ASK ============ -->
+<section class="beat deep">
+  <div class="wrap">
+    <span class="eyebrow">11 · The ask</span>
+    <h2 style="margin-top:16px;">Not yet finalised — on purpose.</h2>
+    <p style="margin-top:22px; max-width:60ch; color:var(--ink-soft); font-size:1.05rem; line-height:1.65;">We haven't decided the specifics here: a funding amount and its use, or a non-financial ask like mentorship or pilot access. Presenting an unfinalised ask with invented figures would repeat the exact vagueness problem this whole pitch is built to avoid. When we do finalise it, it will be a specific number or a specific named request — not a general statement that funding would help.</p>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="close">
+  <div class="wrap close-inner">
+    <span class="eyebrow">The team behind NyumbaIQ</span>
+    <h2>Built by six people<br>who got tired of the doubt.</h2>
+    <p class="lede">This started as a Design Innovation Programme assignment. We kept building because the problem is real, we'd already done the legwork to validate it, and nobody else in the market is solving trust specifically.</p>
+    <div class="team-row">
+      <span class="team-name">Bethwel Monny</span>
+      <span class="team-name">Betty Okello</span>
+      <span class="team-name">Simon Muchina</span>
+      <span class="team-name">Emmanuel Onyango</span>
+      <span class="team-name">Benjamin Nengomasha</span>
+      <span class="team-name">Katelyn Nashikawa</span>
+    </div>
+    <div class="team-tag">NyumbaIQ · Nairobi, Kenya · 2026</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 NyumbaIQ</span>
+    <span><a href="index.html">Landing page</a> · <a href="app.html">The product</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
